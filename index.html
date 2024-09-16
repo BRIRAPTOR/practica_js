@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="main_container">
+    <h1>Ejercicios en JavaScript</h1>
+
+    <div class="container">
+        <h2>1. Calcular Intereses</h2>
+        <label for="capital">Capital invertido:</label>
+        <input type="number" id="capital" placeholder="Ingresa el capital invertido">
+        <button onclick="mostrarIntereses()">Calcular Intereses</button>
+        <p id="resultadoIntereses"></p>
+    </div>
+
+    <div class="container">
+        <h2>2. Calcular Sueldo con Comisiones</h2>
+        <label for="sueldoBase">Sueldo base:</label>
+        <input type="number" id="sueldoBase" placeholder="Ingresa el sueldo base">
+
+        <label for="venta1">Venta 1:</label>
+        <input type="number" id="venta1" placeholder="Ingresa la primera venta">
+
+        <label for="venta2">Venta 2:</label>
+        <input type="number" id="venta2" placeholder="Ingresa la segunda venta">
+
+        <label for="venta3">Venta 3:</label>
+        <input type="number" id="venta3" placeholder="Ingresa la tercera venta">
+
+        <button onclick="calcularSueldo()">Calcular Sueldo</button>
+        <p id="resultadoSueldo"></p>
+    </div>
+
+    <div class="container">
+        <h2>3. Precio con Descuento</h2>
+        <label for="totalCompra">Total de la compra:</label>
+        <input type="number" id="totalCompra" placeholder="Ingresa el total de la compra">
+        <button onclick="calcularDescuento()">Calcular Descuento</button>
+        <p id="resultadoDescuento"></p>
+    </div>
+
+    <div class="container">
+        <h2>4. Calificación Final</h2>
+        <label for="parcial1">Parcial 1:</label>
+        <input type="number" id="parcial1" placeholder="Calificación parcial 1">
+
+        <label for="parcial2">Parcial 2:</label>
+        <input type="number" id="parcial2" placeholder="Calificación parcial 2">
+
+        <label for="parcial3">Parcial 3:</label>
+        <input type="number" id="parcial3" placeholder="Calificación parcial 3">
+
+        <label for="examenFinal">Examen final:</label>
+        <input type="number" id="examenFinal" placeholder="Calificación examen final">
+
+        <label for="trabajoFinal">Trabajo final:</label>
+        <input type="number" id="trabajoFinal" placeholder="Calificación trabajo final">
+
+        <button onclick="calcularCalificacion()">Calcular Calificación</button>
+        <p id="resultadoCalificacion"></p>
+    </div>
+
+    <div class="container">
+        <h2>5. Calcular Edad</h2>
+        <label for="fechaNacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fechaNacimiento">
+        <button onclick="calcularEdad()">Calcular Edad</button>
+        <p id="resultadoEdad"></p>
+    </div>
+
+    <div class="container">
+        <h2>6. Palabras a Números</h2>
+        <label for="palabras">Ingresa palabras (separadas por comas):</label>
+        <input type="text" id="palabras" placeholder="Ejemplo: uno, dos, tres">
+        <button onclick="palabrasANumeros()">Convertir a Números</button>
+        <p id="resultadoPalabrasNumeros"></p>
+    </div>
+
+    <div class="container">
+        <h2>7. Pago de Horas Extras</h2>
+        <label for="horasTrabajadas">Horas trabajadas:</label>
+        <input type="number" id="horasTrabajadas" placeholder="Ingresa el total de horas trabajadas">
+        <label for="pagoHora">Pago por hora:</label>
+        <input type="number" id="pagoHora" placeholder="Ingresa el pago por hora">
+        <button onclick="calcularPagoHorasExtras()">Calcular Pago</button>
+        <p id="resultadoHorasExtras"></p>
+    </div>
+
+    <div class="container">
+        <h2>8. Calcular Utilidades</h2>
+        <label for="salario">Salario mensual:</label>
+        <input type="number" id="salario" placeholder="Ingresa el salario mensual">
+        <label for="antiguedad">Antigüedad en años:</label>
+        <input type="number" id="antiguedad" placeholder="Ingresa la antigüedad en años">
+        <button onclick="calcularUtilidad()">Calcular Utilidad</button>
+        <p id="resultadoUtilidad"></p>
+    </div>
+
+    <div class="container">
+        <h2>9. Cálculo de Letra del DNI</h2>
+        <label for="dni">Número de DNI:</label>
+        <input type="number" id="dni" placeholder="Ingresa el número de DNI">
+        <button onclick="calcularLetraDNI()">Calcular Letra</button>
+        <p id="resultadoLetraDNI"></p>
+    </div>
+
+    <div class="container">
+        <h2>Validador de Formulario</h2>
+        <form id="formulario" onsubmit="return validarFormulario()">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Email" required>
+
+            <label for="comentarios">Comentarios:</label>
+            <textarea class="txt_area" id="comentarios" placeholder="Escribe tus comentarios (máx. 50 caracteres)" maxlength="50" required></textarea>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" placeholder="Contraseña (mínimo 6 caracteres)" required>
+
+            <label for="aceptoCondiciones">
+                <input type="checkbox" id="aceptoCondiciones" class="btnterm" required> Acepto las condiciones del servicio
+            </label>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="resultadoFormulario"></p>
+    </div>
+
+    <div class="container">
+        <h2>10. Eliminar etiquetas peligrosas</h2>
+        <label for="htmlInput">Cadena HTML:</label>
+        <textarea id="htmlInput" placeholder="Ingresa el HTML" class="txt_area"></textarea>
+        <button onclick="eliminarEtiquetasPeligrosas()">Eliminar etiquetas peligrosas</button>
+        <p id="resultadoHTML"></p>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
