@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #2318c5;
     margin: 0;
     padding: 20px;
 }
@@ -13,7 +13,7 @@ h1, h2 {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: white;
+    background-color: #25a9ae;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -28,17 +28,15 @@ input {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
     box-sizing: border-box;
 }
 
 button, textarea {
     width: 100%;
     padding: 10px;
-    background-color: #28a745;
+    background-color: #1737b8;
     color: white;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
 }
 .txt_area {
@@ -49,7 +47,7 @@ button, textarea {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #0b102b;
 }
 
 p {
